@@ -1,25 +1,172 @@
-
-
 \documentclass[12pt]{article}
-\usepackage{url}
-\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
 
+% Gói cơ bản
 \usepackage{graphicx}
-
-
-
-\usepackage[T5]{fontenc}      % hỗ trợ font tiếng Việt
-\usepackage[utf8]{inputenc}   % mã hóa UTF-8
-\usepackage[vietnamese]{babel} % gói ngôn ngữ tiếng Việt
-
+\usepackage{url}
+\usepackage{pgffor}
 \usepackage{array}
 \usepackage{geometry}
 \geometry{a4paper, margin=1in}
 \usepackage{longtable}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+\usepackage{setspace}
 
 
+% Hỗ trợ tiếng Việt
+\usepackage[T5]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+
+% Hyperlink cho URL
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+
+% =========================
+% Bìa
+% =========================
+\geometry{
+    top=1.8cm,
+    bottom=1.8cm,
+    left=2cm,
+    right=2cm
+}
+
+\setstretch{1.05} % thu nhỏ khoảng cách dòng
 
 \begin{document}
+\thispagestyle{empty}
+
+% ===== Khung viền màu xanh =====
+\begin{tikzpicture}[remember picture, overlay]
+    \draw[line width=2pt, blue]
+        ($(current page.north west)+(1cm,-1cm)$)
+        rectangle
+        ($(current page.south east)+(-1cm,1cm)$);
+\end{tikzpicture}
+
+% ===== Nội dung =====
+\begin{center}
+    \vspace*{0.3cm}
+
+    {\Large \bfseries ĐẠI HỌC QUỐC GIA TP.HCM}\\[-2pt]
+    {\Large \bfseries TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}\\[1.0cm]
+
+    % ===== Logo =====
+    \includegraphics[width=5.5cm]{logo.jpg}\\[1.0cm]
+
+    {\Large \bfseries BÁO CÁO ĐỒ ÁN MÔN HỌC}\\[0.2cm]
+    {\large \bfseries Kỹ năng nghề nghiệp}\\[0.5cm]
+    {\Large \bfseries TUẦN 1}\\[1.2cm]
+\end{center}
+
+\noindent
+{\bfseries Môn học:} Kỹ năng nghề nghiệp – SS004.Q12 \\[4pt]
+
+{\bfseries Giảng viên hướng dẫn:} Nguyễn Văn Toàn \\[8pt]
+
+{\bfseries Thực hiện bởi sinh viên:}\\[-4pt]
+
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\topsep}{0pt}
+    \setlength{\partopsep}{0pt} % giảm spacing giữa các mục
+    \item Man Mỹ Phương — MSSV: 24521414
+    \item Trần Thu Phương — MSSV: 24521419
+    \item Thành Công Vinh — MSSV: 24522027
+    \item Nguyễn Văn Vỹ — MSSV: 24522063
+    \item Nguyễn Trần Duy Anh — MSSV: 205220393
+\end{itemize}
+
+\vspace{0.4cm}
+
+{\bfseries Thời gian thực hiện:} Thứ 6, ngày 28 tháng 11 năm 2025
+
+
+
+% =========================
+% Lời cảm ơn
+% =========================
+\newpage
+\begin{center}
+{\Large \textbf{LỜI CẢM ƠN}}
+\end{center}
+
+Lời đầu tiên, em xin gửi lời cảm ơn chân thành và sâu sắc đến thầy Nguyễn Văn Toàn – giảng viên môn Kỹ năng nghề nghiệp (SS004.6). Nhờ sự hướng dẫn tận tình và những kiến thức bổ ích thầy đã truyền đạt, em đã có thêm nhiều góc nhìn mới và hiểu biết sâu hơn về các kỹ năng cần thiết cho hành trình học tập cũng như định hướng nghề nghiệp trong tương lai.
+
+Trong suốt quá trình học môn này, em luôn nhận được sự hỗ trợ, chỉ dẫn và những góp ý quý báu từ thầy. Những chia sẻ của thầy không chỉ giúp em hoàn thiện kỹ năng chuyên môn và kỹ năng mềm mà còn là nguồn động lực lớn để em cố gắng hơn mỗi ngày. Dù đã nỗ lực hết mình, em nhận thức rằng bản thân vẫn còn nhiều hạn chế và rất mong sẽ tiếp tục nhận được sự chỉ bảo của thầy trong thời gian tới.
+
+Em xin chân thành cảm ơn thầy vì sự tận tâm và nhiệt huyết trong giảng dạy. Cuối cùng, em kính chúc thầy thật nhiều sức khỏe, niềm vui và thành công trong sự nghiệp giáo dục và nghiên cứu.
+
+\begin{flushright}
+Thành phố Hồ Chí Minh, tháng 11 năm 2025
+\end{flushright}
+
+% =========================
+% Nhận xét của giảng viên
+% =========================
+\newpage
+\begin{center}
+{\Large \textbf{NHẬN XÉT CỦA GIẢNG VIÊN}}
+\end{center}
+
+\noindent
+\foreach \i in {1,...,32}{%
+\noindent ........................................................................................................................\\[6pt]
+}
+
+% =========================
+% Mục lục tự động
+% =========================
+
+\newpage
+\begin{center}
+{\Large \textbf{MỤC LỤC}}
+\end{center}
+
+LỜI CẢM ƠN \dotfill 1
+
+NHẬN XÉT CỦA GIẢNG VIÊN \dotfill 2
+
+MỤC LỤC \dotfill 3
+
+A. HỢP ĐỒNG THÀNH LẬP NHÓM \dotfill 4
+
+\quad Thời gian thành lập nhóm \dotfill 4
+
+\quad Tên nhóm \dotfill 4
+
+\quad Thành viên nhóm \dotfill 4
+
+\quad Nguyên tắc làm việc nhóm \dotfill 4
+
+\quad Không gian trao đổi và giao tiếp \dotfill 5
+
+\quad Mục đích thành lập nhóm \dotfill 5
+
+\quad Đánh giá công tác làm việc nhóm \dotfill 5
+
+B. CÁC LINK MÀ NHÓM ĐÃ DÙNG \dotfill 6
+
+C. GIỚI THIỆU VÀ HƯỚNG DẪN CHƠI GAME \dotfill 6
+
+\quad Lời mở đầu và giới thiệu chung \dotfill 12
+
+\quad Cài đặt và thiết lập \dotfill 14
+
+Giao diện người dùng (UI) và điều khiển \dotfill
+
+Cơ chế game play cốt lõi \dotfill
+
+Hướng dẫn chơi theo tiến trình \dotfill
+
+Mẹo nâng cao và những sai lầm cần tránh \dotfill
+
+Lời kết và lời mời \dotfill
+\newpage
+% =========================
+% Hợp đồng thành lập nhóm
+% =========================
 
 \begin{center}
 {\Large \textbf{HỢP ĐỒNG THÀNH LẬP NHÓM}}\\[6pt]
@@ -94,6 +241,7 @@ Zalo là nền tảng nhắn tin và trao đổi thông tin phổ biến tại V
 Link: \url{https://zalo.me/g/glejxa926}
 
 \subsection*{3. Google meet}
+Google Meet là công cụ họp trực tuyến được nhóm sinh viên sử dụng để trao đổi, thảo luận và cập nhật tiến độ khi làm việc nhóm dự án game Tetris. Nhờ Google Meet, các thành viên có thể tổ chức các buổi họp nhanh, chia sẻ màn hình, thảo luận ý tưởng và giải quyết vấn đề cùng nhau, bất kể ở đâu, giúp nâng cao hiệu quả phối hợp và đảm bảo dự án tiến triển suôn sẻ.
 
 Link: \url{https://meet.google.com/hdn-wtzq-fmo}
 
@@ -131,9 +279,9 @@ Link: \url{https://github.com/phun11/Tetris-Game}
 
 \section*{Mục đích thành lập nhóm}
 
-Nâng cao kỹ năng làm việc nhóm và các kỹ năng mềm khác cho các thành viên.
+1. Nâng cao kỹ năng làm việc nhóm và các kỹ năng mềm khác cho các thành viên.
 
-Hỗ trợ, động viên lẫn nhau để hoàn thành tốt nhiệm vụ và đạt kết quả cao trong môn học.
+2. Hỗ trợ, động viên lẫn nhau để hoàn thành tốt nhiệm vụ và đạt kết quả cao trong môn học.
 
 \section*{VII. Đánh giá công tác làm việc nhóm}
 
@@ -189,23 +337,22 @@ Hợp đồng lập nhóm đã được thông qua và ký kết.
 \begin{center}
 \begin{tabular}{ccc}
     \includegraphics[width=4cm]{mphun.jpg} &
-    \includegraphics[width=4cm]{duyanh.jpg} \\[1.2cm]
-    \includegraphics[width=4cm]{congvinh.jpg} & 
+    \includegraphics[width=4cm]{duyanh.jpg} &
+    \includegraphics[width=4cm]{congvinh.jpg} \\
+    [1.2cm]
     \includegraphics[width=4cm]{thuphun.jpg} &
-    \includegraphics[width=4cm]{vy.jpg} \\
+    \includegraphics[width=4cm]{vy.jpg} &
+    {}
 \end{tabular}
 \end{center}
 
 
-
 \vspace{3cm}
-
+\newpage
 
 \section*{B. GIỚI THIỆU VÀ HƯỚNG DẪN CHƠI GAME}
 
-\subsection*{Lời mở đầu và giới thiệu chung}
-
-\subsubsection*{1. Lời chào và bối cảnh}
+\section*{I. Lời mở đầu và giới thiệu chung}
 
 Chào mừng bạn đến với phiên bản Tetris của chúng tôi!
 
@@ -237,6 +384,151 @@ Sau khi mở game, để có trải nghiệm chơi mượt mà và tập trung n
     \item \textbf{Đồ họa \& Hiển thị:} Trò chơi mặc định chạy ở chế độ cửa sổ tiêu chuẩn. Đảm bảo độ phân giải màn hình của bạn phù hợp để nhìn rõ các khối gạch và điểm số.
     \item \textbf{Âm thanh:} Kiểm tra loa hoặc tai nghe để tận hưởng nhạc nền và hiệu ứng âm thanh (SFX) khi xếp gạch. Bạn có thể điều chỉnh âm lượng hệ thống sao cho vừa đủ nghe, giúp tăng sự tập trung.
 \end{itemize}
+
+\section*{III. Giao diện người dùng (UI) và điều khiển}
+
+\subsection*{1. Khu vực Playfield (12 × 20)}
+
+Đây là không gian chính của trò chơi, có kích thước tiêu chuẩn:
+
+Chiều rộng: 12 ô
+
+Chiều cao: 20 ô
+
+Tại đây, các khối Tetrimino rơi từ trên xuống. Nhiệm vụ của bạn là sắp xếp các khối sao cho chúng tạo thành các hàng đầy, từ đó xóa hàng và ghi điểm. Người chơi cần quan sát, dự đoán vị trí rơi của các khối và xoay hoặc di chuyển chúng để xếp chồng một cách hợp lý, tránh để khối chồng đầy Playfield dẫn tới kết thúc trò chơi.
+
+\subsection*{2. Khu vực Next Queue (Khối tiếp theo)}
+
+Nằm ở góc phải màn hình, đây là vùng hiển thị khối Tetrimino sẽ xuất hiện tiếp theo. Khu vực này giúp người chơi xem trước để lên chiến lược hợp lý. Bạn nên quan sát Next Queue thường xuyên để tối ưu hóa việc xếp khối, giảm sai sót và tăng khả năng đạt điểm cao.
+
+\subsection*{3. Điểm số (Score)}
+
+Điểm số được hiển thị rõ ràng trên giao diện, ở cạnh Playfield, giúp người chơi theo dõi thành tích của mình.
+
+Điểm tăng mỗi khi bạn xoá hàng. Xoá càng nhiều hàng cùng lúc, điểm càng cao.
+
+\subsection*{4. Level hiện tại (Level)}
+
+Level thể hiện độ khó của ván chơi. Khi bạn clear mỗi 10 hàng, level sẽ tăng, tốc độ các khối rơi cũng tăng lên 10\%.
+
+Hệ thống level giúp trò chơi ngày càng có tính thử thách, không gây nhàm chán, giúp bạn rèn luyện phản xạ nhanh và tư duy chiến lược.
+
+\subsection*{2. Hệ thống điều khiển}
+
+Bạn có thể điều khiển khối Tetrimino bằng các phím sau:
+
+Mũi tên trái/phải: di chuyển khối Tetrimino sang trái/phải
+
+Mũi tên lên: xoay khối Tetrimino theo chiều kim đồng hồ.
+
+Mũi tên xuống: tăng tốc rơi (soft drop).
+
+Space: thả nhanh (hard drop).
+
+Lưu ý: luôn lưu/high score tự động hoặc theo file nếu game hỗ trợ.
+
+\section*{IV. Cơ chế Gameplay cốt lõi}
+
+\subsection*{1. Các loại khối}
+
+\subsubsection*{1.1 Các Tetromino: I, O, T, S, Z, J, L.}
+
+\noindent{Hình ảnh minh họa :}
+
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{hinhanhvythe.jpg}
+\end{center}
+\renewcommand{\arraystretch}{2.0} % chỉnh hệ số giãn dòng
+\begin{tabular}{|c|c|>{\centering\arraybackslash}p{8cm}|}
+\hline
+\textbf{Khối} & \textbf{Tên} & \textbf{Đặc điểm} \\
+\hline
+I & I-Tetrimino & Dài 4 ô thẳng hàng. Mạnh trong việc tạo Tetris (xóa 4 dòng). \\
+\hline
+O & O-Tetrimino & Hình vuông 2×2, không thay đổi hình dạng khi xoay. \\
+\hline
+T & T-Tetrimino & Dạng chữ T, linh hoạt, dễ xoay và xử lý nhiều tình huống. \\
+\hline
+J & J-Tetrimino & Hình chữ L ngược, tạo rãnh tốt. \\
+\hline
+L & L-Tetrimino & Hình chữ L, dùng để lấp góc hiệu quả. \\
+\hline
+S & S-Tetrimino & Dạng ziczac, thường khó xử lý nếu stack không phẳng. \\
+\hline
+Z & Z-Tetrimino & Tương tự S nhưng đối xứng ngược. \\
+\hline
+\end{tabular}
+
+\vspace{1em}
+
+\subsubsection*{1.2. Mỗi khối có hình dạng và cách xoay khác nhau.}
+\begin{itemize}
+    \item \textbf{Nguyên tắc xoay tổng  :}
+
+
+Mỗi Tetromino có 4 trạng thái xoay tương ứng với các góc:
+\[
+0^\circ \rightarrow 90^\circ \rightarrow 180^\circ \rightarrow 270^\circ \rightarrow 0^\circ
+\]
+
+\item \textbf {Khi người chơi nhấn phím xoay, trò chơi thực hiện các bước:}
+
+Khi bạn nhấn phím xoay, trò chơi sẽ lấy hình dạng và vị trí hiện tại của Tetrimino để chuẩn bị cho thao tác xoay. Đây là bước quan trọng để hệ thống biết khối nào đang được thao tác.
+
+\vspace{0.03cm}
+Tiếp theo, khối sẽ được xoay 90° theo chiều kim đồng hồ. Việc này thay đổi hướng và hình dạng của Tetrimino, giúp bạn linh hoạt sắp xếp các khối để lấp đầy các khoảng trống trên bảng chơi.
+
+\vspace{0.03cm}
+Ngay sau khi xoay, trò chơi sẽ kiểm tra xem khối có va chạm hay không. Khối không được vượt ra ngoài biên trái/phải, không rơi xuống sàn và không chồng lên các khối đã cố định. Việc kiểm tra này đảm bảo Tetrimino luôn nằm đúng vị trí và trò chơi diễn ra mượt mà.
+
+\vspace{0.03cm}
+Nếu xảy ra va chạm, cơ chế wall kick sẽ được kích hoạt. Trò chơi sẽ tự động đẩy khối sang trái hoặc phải 1–2 ô để tìm vị trí hợp lệ. Nhờ vậy, Tetrimino vẫn có thể xoay ngay cả khi gần tường hoặc sát các khối cố định, hạn chế tình trạng kẹt khối.
+
+\vspace{0.03cm}
+Trong trường hợp khối vẫn không thể đặt vào vị trí hợp lệ sau khi thử wall kick, thao tác xoay sẽ bị hủy và Tetrimino giữ nguyên trạng thái ban đầu. Điều này giúp trò chơi luôn ổn định và bạn không mất kiểm soát khối.
+
+\vspace{0.03cm}
+Nhờ cơ chế xoay kết hợp kiểm tra va chạm và wall kick, việc xoay Tetrimino trở nên mượt mà, dễ điều khiển và hạn chế tình trạng kẹt sát tường, mang lại trải nghiệm chơi Tetris trơn tru và thú vị hơn.
+
+\vspace{0.03cm}
+Nhờ cơ chế xoay + kiểm tra va chạm + wall kick, việc điều khiển Tetromino trở nên mượt mà và ổn định.
+\end{itemize}
+%---------------------------------------------------------------
+
+\subsubsection*{2. Hệ thống điểm \& xếp hạng}
+
+\begin{itemize}
+    \item \textbf{Tính điểm}
+\end{itemize}
+
+Trong trò chơi, người chơi được thưởng điểm dựa trên số lượng hàng bị xóa trong một lượt.  
+Xóa càng nhiều hàng thì điểm càng cao:
+
+\begin{itemize}
+    \item[\text{\large$\circ$}] 1 dòng xóa = \textbf{40 điểm}
+    \item[\text{\large$\circ$}] 2 dòng xóa = \textbf{100 điểm}
+    \item[\text{\large$\circ$}] 3 dòng xóa = \textbf{300 điểm}
+    \item[\text{\large$\circ$}] 4 dòng xóa (Tetris) = \textbf{1200 điểm}
+\end{itemize}
+\begin{itemize}
+    \item \textbf{Next Queue:} hiển thị trước khối tiếp theo, giúp người chơi chủ động lên chiến lược.  
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{Tăng tốc độ rơi:}  sau mỗi 10 dòng được xóa, tốc độ rơi của khối tăng 10\%, khiến trò chơi thách thức dần theo thời gian.
+\end{itemize}
+
+% --------------------------------------------------------------
+
+\subsubsection*{3. Khi nào trò chơi kết thúc?}
+
+Trò chơi sẽ kết thúc khi không còn không gian để tạo vị trí xuất hiện cho khối mới.
+
+\begin{itemize}
+    \item Gạch chạm đỉnh → không thể sinh khối mới → \textbf{Game Over}
+    \item Màn hình hiển thị: tổng điểm, số hàng đã xóa và level đạt được.
+\end{itemize}
+
 
 \section*{V. Hướng dẫn chơi theo tiến trình}
 
@@ -325,6 +617,35 @@ Các lựa chọn sau khi kết thúc:
     \item Xem bảng xếp hạng
 \end{itemize}
 
+\section*{VI. Mẹo nâng cao \& những sai lầm cần tránh }
+
+\begin{itemize}
+    \item[-] {Hạn chế tạo khe trống, đặc biệt ở gần đáy}
+\end{itemize}
+
+Bạn nên tránh tạo ra các khe trống, đặc biệt là ở khu vực gần đáy.  
+Những khoảng hở này thường rất khó lấp đầy và dễ khiến các khối phía trên bị dồn lên cao, làm tăng nguy cơ thua cuộc.
+
+\begin{itemize}
+    \item[-] {Tạo combo xóa nhiều hàng cùng lúc để ghi điểm cao}
+\end{itemize}
+
+Việc xóa nhiều hàng liên tiếp hoặc xóa nhiều hàng trong một lần sẽ giúp tăng điểm đáng kể.  
+Vì vậy, người chơi nên xây dựng chiến thuật đặt khối hợp lý để tạo ra combo, tối ưu hóa số điểm qua từng lượt.
+
+\begin{itemize}
+     \item[-] {Ưu tiên sinh tồn khi tốc độ tăng, không quá mạo hiểm đặt khối}
+\end{itemize}
+
+Khi tốc độ rơi của các khối ngày càng nhanh, người chơi nên tập trung vào việc giữ playfield ổn định.  
+Đừng quá mạo hiểm đặt các khối khó chỉ để kiếm thêm điểm, vì một sai sót nhỏ có thể khiến bàn chơi bị đầy rất nhanh.
+
+\begin{itemize}
+    \item[-] {Lưu ý: luôn sao lưu High Score nếu game có tính năng này}
+\end{itemize}
+
+Nếu trò chơi hỗ trợ tính năng lưu High Score, người chơi nên thường xuyên kiểm tra hoặc sao lưu để tránh mất dữ liệu thành tích.  
+Điều này giúp bạn theo dõi tiến bộ và đặt ra mục tiêu rõ ràng hơn cho các lần chơi sau.
 
 \subsection*{VII. Lời kết và lời mời}
 
