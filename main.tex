@@ -37,7 +37,7 @@
 \begin{document}
 \thispagestyle{empty}
 
-% ===== Khung viền màu xanh =====
+% ===== Khung viền màu xanh cho bìa=====
 \begin{tikzpicture}[remember picture, overlay]
     \draw[line width=2pt, blue]
         ($(current page.north west)+(1cm,-1cm)$)
@@ -45,7 +45,7 @@
         ($(current page.south east)+(-1cm,1cm)$);
 \end{tikzpicture}
 
-% ===== Nội dung =====
+% ===== Nội dung bìa=====
 \begin{center}
     \vspace*{0.3cm}
 
@@ -88,11 +88,12 @@
 % Lời cảm ơn
 % =========================
 \newpage
+\thispagestyle{empty}
 \begin{center}
 {\Large \textbf{LỜI CẢM ƠN}}
 \end{center}
 
-Lời đầu tiên, em xin gửi lời cảm ơn chân thành và sâu sắc đến thầy Nguyễn Văn Toàn – giảng viên môn Kỹ năng nghề nghiệp (SS004.6). Nhờ sự hướng dẫn tận tình và những kiến thức bổ ích thầy đã truyền đạt, em đã có thêm nhiều góc nhìn mới và hiểu biết sâu hơn về các kỹ năng cần thiết cho hành trình học tập cũng như định hướng nghề nghiệp trong tương lai.
+Lời đầu tiên, em xin gửi lời cảm ơn chân thành và sâu sắc đến thầy Nguyễn Văn Toàn – giảng viên môn Kỹ năng nghề nghiệp (SS004.Q12). Nhờ sự hướng dẫn tận tình và những kiến thức bổ ích thầy đã truyền đạt, em đã có thêm nhiều góc nhìn mới và hiểu biết sâu hơn về các kỹ năng cần thiết cho hành trình học tập cũng như định hướng nghề nghiệp trong tương lai.
 
 Trong suốt quá trình học môn này, em luôn nhận được sự hỗ trợ, chỉ dẫn và những góp ý quý báu từ thầy. Những chia sẻ của thầy không chỉ giúp em hoàn thiện kỹ năng chuyên môn và kỹ năng mềm mà còn là nguồn động lực lớn để em cố gắng hơn mỗi ngày. Dù đã nỗ lực hết mình, em nhận thức rằng bản thân vẫn còn nhiều hạn chế và rất mong sẽ tiếp tục nhận được sự chỉ bảo của thầy trong thời gian tới.
 
@@ -105,65 +106,71 @@ Thành phố Hồ Chí Minh, tháng 11 năm 2025
 % =========================
 % Nhận xét của giảng viên
 % =========================
+% =========================
+% NHẬN XÉT CỦA GIẢNG VIÊN (ĐÃ SỬA LỖI)
+% =========================
 \newpage
 \begin{center}
 {\Large \textbf{NHẬN XÉT CỦA GIẢNG VIÊN}}
 \end{center}
 
+\addcontentsline{toc}{section}{NHẬN XÉT CỦA GIẢNG VIÊN}
+
+\vspace{0.5cm} % Khoảng cách từ tiêu đề xuống dòng đầu tiên
+
+% Sử dụng vòng lặp để tạo 18 dòng kẻ chấm thẳng hàng
+% Khoảng cách giữa các dòng là 1.0cm giúp trang thoáng và dễ viết
 \noindent
-\foreach \i in {1,...,32}{%
-\noindent ........................................................................................................................\\[6pt]
+\foreach \i in {1,...,18}{
+    \makebox[\linewidth]{\dotfill} \\[0.75cm]
 }
 
 % =========================
 % Mục lục tự động
 % =========================
-
+% =========================
+% Mục lục tự động
+% =========================
 \newpage
+\thispagestyle{empty} % ẩn số trang
+
+% Cho phép hiển thị section + subsection trong mục lục
+\setcounter{tocdepth}{2}
+
 \begin{center}
 {\Large \textbf{MỤC LỤC}}
 \end{center}
 
-LỜI CẢM ƠN \dotfill 1
+% Lời cảm ơn và nhận xét không đánh số nhưng có trong mục lục
+\section*{LỜI CẢM ƠN}
+\addcontentsline{toc}{section}{LỜI CẢM ƠN}
 
-NHẬN XÉT CỦA GIẢNG VIÊN \dotfill 2
+\section*{NHẬN XÉT CỦA GIẢNG VIÊN}
+\addcontentsline{toc}{section}{NHẬN XÉT CỦA GIẢNG VIÊN}
 
-MỤC LỤC \dotfill 3
+% Các phần còn lại đánh số bình thường
+\section{HỢP ĐỒNG THÀNH LẬP NHÓM}
+\subsection{Thời gian thành lập nhóm}
+\subsection{Tên nhóm}
+\subsection{Thành viên nhóm}
+\subsection{Nguyên tắc làm việc nhóm}
+\subsection{Không gian trao đổi và giao tiếp}
+\subsection{Mục đích thành lập nhóm}
+\subsection{Đánh giá công tác làm việc nhóm}
 
-A. HỢP ĐỒNG THÀNH LẬP NHÓM \dotfill 4
 
-\quad Thời gian thành lập nhóm \dotfill 4
 
-\quad Tên nhóm \dotfill 4
+\section{GIỚI THIỆU VÀ HƯỚNG DẪN CHƠI GAME}
+\subsection{Lời mở đầu và giới thiệu chung}
+\subsection{Cài đặt và thiết lập}
+\subsection{Giao diện người dùng (UI) và điều khiển}
+\subsection{Cơ chế Gameplay cốt lõi}
+\subsection{Hướng dẫn chơi theo tiến trình}
+\subsection{Mẹo nâng cao \& những sai lầm cần tránh}
+\subsection{Lời kết và lời mời}
 
-\quad Thành viên nhóm \dotfill 4
-
-\quad Nguyên tắc làm việc nhóm \dotfill 4
-
-\quad Không gian trao đổi và giao tiếp \dotfill 5
-
-\quad Mục đích thành lập nhóm \dotfill 5
-
-\quad Đánh giá công tác làm việc nhóm \dotfill 5
-
-B. CÁC LINK MÀ NHÓM ĐÃ DÙNG \dotfill 6
-
-C. GIỚI THIỆU VÀ HƯỚNG DẪN CHƠI GAME \dotfill 6
-
-\quad Lời mở đầu và giới thiệu chung \dotfill 12
-
-\quad Cài đặt và thiết lập \dotfill 14
-
-Giao diện người dùng (UI) và điều khiển \dotfill
-
-Cơ chế game play cốt lõi \dotfill
-
-Hướng dẫn chơi theo tiến trình \dotfill
-
-Mẹo nâng cao và những sai lầm cần tránh \dotfill
-
-Lời kết và lời mời \dotfill
 \newpage
+
 % =========================
 % Hợp đồng thành lập nhóm
 % =========================
@@ -196,7 +203,7 @@ Lời kết và lời mời \dotfill
 
 \section*{Nguyên tắc làm việc nhóm:}
 
- Điều 1: Ứng xử văn minh, lịch sự và tôn trọng tất cả các thành viên trong nhóm, trên tinh thần bình đẳng và hợp tác.
+Điều 1: Ứng xử văn minh, lịch sự và tôn trọng tất cả các thành viên trong nhóm, trên tinh thần bình đẳng và hợp tác.
 
 Điều 2: Tích cực, chủ động trong việc xây dựng và đóng góp ý kiến cho hoạt động của nhóm.
 
@@ -372,6 +379,7 @@ Quy trình cài đặt gồm 3 bước đơn giản:
 
 \begin{itemize}
     \item \textbf{Bước 1: Truy cập và Tải về.} Truy cập vào đường dẫn GitHub của dự án. Tại giao diện chính, tìm và chọn tải xuống tệp nén của trò chơi.
+    Link: https://github.com/phun11/Tetris-Game
     \item \textbf{Bước 2: Giải nén.} Sau khi tải xong, nhấp chuột phải vào tệp tin vừa tải về và giải nén toàn bộ thư mục trò chơi.
     \item \textbf{Bước 3: Mở game.} Truy cập vào thư mục vừa giải nén, tìm file thực thi của trò chơi và nhấp đúp chuột để bắt đầu chơi.
 \end{itemize}
@@ -387,11 +395,11 @@ Sau khi mở game, để có trải nghiệm chơi mượt mà và tập trung n
 
 \section*{III. Giao diện người dùng (UI) và điều khiển}
 
-\subsection*{1. Khu vực Playfield (12 × 20)}
+\subsection*{1. Khu vực Playfield (15 × 20)}
 
 Đây là không gian chính của trò chơi, có kích thước tiêu chuẩn:
 
-Chiều rộng: 12 ô
+Chiều rộng: 15 ô
 
 Chiều cao: 20 ô
 
@@ -413,17 +421,17 @@ Level thể hiện độ khó của ván chơi. Khi bạn clear mỗi 10 hàng, 
 
 Hệ thống level giúp trò chơi ngày càng có tính thử thách, không gây nhàm chán, giúp bạn rèn luyện phản xạ nhanh và tư duy chiến lược.
 
-\subsection*{2. Hệ thống điều khiển}
+\subsection*{5. Hệ thống điều khiển}
 
 Bạn có thể điều khiển khối Tetrimino bằng các phím sau:
 
-Mũi tên trái/phải: di chuyển khối Tetrimino sang trái/phải
+Phím A/D: di chuyển khối Tetrimino sang trái/phải
 
-Mũi tên lên: xoay khối Tetrimino theo chiều kim đồng hồ.
+Phím W: xoay khối Tetrimino theo chiều kim đồng hồ.
 
-Mũi tên xuống: tăng tốc rơi (soft drop).
+Phím S: tăng tốc rơi (soft drop).
 
-Space: thả nhanh (hard drop).
+Phím X: thả nhanh (hard drop).
 
 Lưu ý: luôn lưu/high score tự động hoặc theo file nếu game hỗ trợ.
 
@@ -431,7 +439,7 @@ Lưu ý: luôn lưu/high score tự động hoặc theo file nếu game hỗ tr�
 
 \subsection*{1. Các loại khối}
 
-\subsubsection*{1.1 Các Tetromino: I, O, T, S, Z, J, L.}
+Các Tetromino: I, O, T, S, Z, J, L.
 
 \noindent{Hình ảnh minh họa :}
 
@@ -461,7 +469,7 @@ Z & Z-Tetrimino & Tương tự S nhưng đối xứng ngược. \\
 
 \vspace{1em}
 
-\subsubsection*{1.2. Mỗi khối có hình dạng và cách xoay khác nhau.}
+\subsection*{1.2. Mỗi khối có hình dạng và cách xoay khác nhau.}
 \begin{itemize}
     \item \textbf{Nguyên tắc xoay tổng  :}
 
@@ -495,7 +503,7 @@ Nhờ cơ chế xoay + kiểm tra va chạm + wall kick, việc điều khiển 
 \end{itemize}
 %---------------------------------------------------------------
 
-\subsubsection*{2. Hệ thống điểm \& xếp hạng}
+\subsection*{2. Hệ thống điểm \& xếp hạng}
 
 \begin{itemize}
     \item \textbf{Tính điểm}
@@ -520,7 +528,7 @@ Xóa càng nhiều hàng thì điểm càng cao:
 
 % --------------------------------------------------------------
 
-\subsubsection*{3. Khi nào trò chơi kết thúc?}
+\subsection*{3. Khi nào trò chơi kết thúc?}
 
 Trò chơi sẽ kết thúc khi không còn không gian để tạo vị trí xuất hiện cho khối mới.
 
@@ -566,10 +574,10 @@ Theo dõi khu vực \textbf{Next Queue} (hiển thị khối sẽ xuất hiện 
 \noindent \textbf{Các điều khiển quan trọng:}
 
 \begin{itemize}
-    \item \textbf{Move Left / Right}: di chuyển khối sang trái / phải.
-    \item \textbf{Rotate}: xoay khối theo chiều kim đồng hồ.
-    \item \textbf{Soft Drop}: tăng tốc độ rơi nhưng vẫn điều khiển được.
-    \item \textbf{Hard Drop}: thả khối xuống đáy ngay lập tức, ghi thêm điểm.
+    \item \textbf{Phím A/D}: di chuyển khối sang trái / phải.
+    \item \textbf{Phím W}: xoay khối theo chiều kim đồng hồ.
+    \item \textbf{Phím S (Soft Drop)}: tăng tốc độ rơi nhưng vẫn điều khiển được.
+    \item \textbf{Phím X (Hard Drop)}: thả khối xuống đáy ngay lập tức, ghi thêm điểm.
 \end{itemize}
 
 \textit{Lưu ý:} Người mới nên dùng Soft Drop để dễ kiểm soát; khi quen hãy dùng Hard Drop để tăng tốc độ chơi và ghi điểm.
@@ -647,7 +655,7 @@ Khi tốc độ rơi của các khối ngày càng nhanh, người chơi nên t�
 Nếu trò chơi hỗ trợ tính năng lưu High Score, người chơi nên thường xuyên kiểm tra hoặc sao lưu để tránh mất dữ liệu thành tích.  
 Điều này giúp bạn theo dõi tiến bộ và đặt ra mục tiêu rõ ràng hơn cho các lần chơi sau.
 
-\subsection*{VII. Lời kết và lời mời}
+\section*{VII. Lời kết và lời mời}
 
 Tetris không chỉ là trò chơi giải trí, mà còn là bài tập rèn luyện trí não, giúp bạn thư giãn sau những giờ học tập hay làm việc căng thẳng.
 
